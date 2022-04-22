@@ -1,13 +1,20 @@
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
-import HomePage from './pages/HomePage';
+import { Routes, Route } from "react-router-dom";
+import { routes } from './routes/Routes';
+import Layout from './components/Layout';
 
-export default function App() {
+const App = () => {
   return (
 		<Routes>
-			<Route exact path="/" element={<HomePage/>} />
+      {routes.map((route) => (
+        <Route 
+          exact={route.exact} 
+          path={route.path} 
+          key={route.path} 
+          element={<Layout>{route.component}</Layout>} 
+        />  
+      ))}
 		</Routes>
   )
 }
+
+export default App;
