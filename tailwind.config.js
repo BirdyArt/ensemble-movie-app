@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      company: "Square Peg"
+    },
     extend: {},
   },
   plugins: [],
