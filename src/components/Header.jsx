@@ -8,7 +8,7 @@ const Header = () => {
   const navLinks = pages.map(page => 
     <Link 
       key={page} 
-      className="no-underline text-gray-800 font-semibold hover:text-gray-600" 
+      className="no-underline text-white font-semibold hover:text-gray-100/50 text-lg" 
       to={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
     >
       {page}
@@ -16,15 +16,14 @@ const Header = () => {
   );
 
   return (
-    <div className="bg-gradient-to-r from-blue-300 to-blue-100">
+    <div className="bg-transparent">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} navLinks={navLinks} />
       {menuOpen &&
-        <nav className="p-4 flex flex-col space-y-3 md:hidden text-center text-lg">
+        <nav className="w-full absolute p-4 flex flex-col space-y-3 md:hidden text-center text-lg top-16 left-1/2 transform -translate-x-1/2 z-10 border-b-2">
           {navLinks}
         </nav>}
     </div>
   );
 };
-
 
 export default Header;
