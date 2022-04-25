@@ -10,13 +10,14 @@ const Header = () => {
       key={page} 
       className="no-underline text-white font-semibold hover:text-gray-100/50 text-lg" 
       to={page === 'Home' ? '/' : `/${page.toLowerCase()}`}
+      onClick={() => setMenuOpen(!menuOpen)} 
     >
       {page}
     </Link>
   );
 
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent absolute top-0 w-full">
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} navLinks={navLinks} />
       {menuOpen &&
         <nav className="w-full absolute p-4 flex flex-col space-y-3 md:hidden text-center text-lg top-16 left-1/2 transform -translate-x-1/2 z-10 border-b-2">

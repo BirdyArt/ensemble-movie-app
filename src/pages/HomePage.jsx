@@ -1,15 +1,9 @@
-import hero from '../assets/hero.webp';
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const navigate = useNavigate();
   return (
-    <div>
-      <img src={hero} alt="hero image" className="w-full object-cover h-screen" />
-      <div
-        className="heading-container absolute flex justify-center items-center w-full h-full top-0 bg-slate-500/70"
-      >
-        <div className="container text-center mx-auto py-6 w-11/12">
+      <div className="container text-center mx-auto py-6 w-11/12">
         <h1 className="text-5xl font-semibold text-white">
           The Open Movie Database Search App
         </h1>
@@ -24,8 +18,6 @@ const HomePage = () => {
           Search
         </button>
       </div>
-      </div>
-    </div>
   );
 };
 
