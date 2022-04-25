@@ -3,7 +3,7 @@ import menu from '../assets/menu.svg';
 import { Link } from "react-router-dom";
 
 const Navbar = ({ menuOpen, setMenuOpen, navLinks }) => (
-  <div className={`absolute w-full z-10 ${menuOpen ? 'bg-slate-300/50' : ''}`}>
+  <div className={`absolute w-full z-10 ${menuOpen ? 'bg-slate-400/75' : ''}`}>
     <div className="flex items-center justify-between py-4 px-4 md:px-14">
       <div className="flex items-center">
         <img src={logo} alt="logo" className="h-14"/>

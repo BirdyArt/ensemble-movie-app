@@ -7,7 +7,12 @@ module.exports = {
     fontFamily: {
       company: "Square Peg"
     },
-    extend: {},
+    extend: {
+      height: {
+        '128': '42rem',
+        'card': '32rem'
+      }
+    },
   },
   plugins: [],
 }
